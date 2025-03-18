@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình tính diện tích và chu vi</title>
+    <link rel="stylesheet" href="0.thunghiem.css">
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <h3>Chương trình tính diện tích và chu vi</h3>
+
+            <div class="form-group">
+                <label for="choose">Chọn hình:</label>
+                <select name="choose" id="choose" onchange="showInputs()">
+                    <option value="none">-- Chọn một hình --</option>
+                    <option value="tam">Hình tam giác</option>
+                    <option value="cn">Hình chữ nhật</option>
+                    <option value="tron">Hình tròn</option>
+                </select>
+            </div>
+
+            <div id="input-area">
+                <!-- Triangle Inputs -->
+                <div class="form-group" id="triangle-inputs">
+                    <label for="side1">Cạnh 1:</label>
+                    <input type="text" id="side1" placeholder="Nhập cạnh 1">
+                    <label for="side2">Cạnh 2:</label>
+                    <input type="text" id="side2" placeholder="Nhập cạnh 2">
+                    <label for="side3">Cạnh 3:</label>
+                    <input type="text" id="side3" placeholder="Nhập cạnh 3">
+                </div>
+
+                <!-- Rectangle Inputs -->
+                <div class="form-group" id="rectangle-inputs">
+                    <label for="length">Chiều dài:</label>
+                    <input type="text" id="length" placeholder="Nhập chiều dài">
+                    <label for="width">Chiều rộng:</label>
+                    <input type="text" id="width" placeholder="Nhập chiều rộng">
+                </div>
+
+                <!-- Circle Inputs -->
+                <div class="form-group" id="circle-inputs">
+                    <label for="radius">Bán kính:</label>
+                    <input type="text" id="radius" placeholder="Nhập bán kính">
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button type="button" onclick="calculate()">Tính toán</button>
+                <button type="reset" onclick="resetForm()">Reset</button>
+            </div>
+
+            <!-- Results -->
+            <div id="results">
+                <p id="area">Diện tích: </p>
+                <p id="perimeter">Chu vi: </p>
+            </div>
+        </fieldset>
+    </div>
+
+    <script src="0.thunghiem.js"></script>
+</body>
+
+</html>
